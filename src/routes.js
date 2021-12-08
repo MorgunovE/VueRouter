@@ -4,9 +4,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 import Home from '@/pages/Home';
+import NotFoundPage from '@/pages/404';
 import Example from '@/pages/Example';
 
 export default new VueRouter({
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -17,6 +19,11 @@ export default new VueRouter({
       path: '/example',
       name: 'example',
       component: Example
+    },
+    {
+      path: '*',
+      name: 'NotFoundPage',
+      component: NotFoundPage
     },
   ]
 });
