@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 import Home from '@/pages/Home';
 import NotFoundPage from '@/pages/404';
 import Shop from '@/pages/Shop';
-
+import Product from '@/pages/Product'
 export default new VueRouter({
   // mode: 'history',
   routes: [
@@ -19,6 +19,11 @@ export default new VueRouter({
       path: '/shop',
       name: 'shop',
       component: Shop
+    },
+    {
+      path: '/shop/:id',
+      name: 'product',
+      component: Product
     },
     {
       path: '*',
